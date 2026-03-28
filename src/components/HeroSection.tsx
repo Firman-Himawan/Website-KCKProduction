@@ -103,7 +103,7 @@ export const HeroSection = () => {
         </motion.h1>
 
         <motion.div variants={itemVariants} className="mx-auto mt-6 max-w-xl px-4 motion-gpu">
-          <p className="font-body text-fluid-body text-white leading-relaxed rounded-xl px-5 py-4 bg-black/75 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.8)]">
+          <p className="font-body text-fluid-body text-white leading-relaxed" style={{ textShadow: "0 2px 8px rgba(0,0,0,1), 0 1px 3px rgba(0,0,0,0.9)" }}>
             <strong className="text-primary font-black tracking-wide">KCK Production</strong>. Transforming visions into unforgettable, high-end experiences through custom-made designs, multimedia production, and world-class management.
           </p>
         </motion.div>
