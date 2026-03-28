@@ -92,7 +92,7 @@ export const Navbar = () => {
         </div>
       </motion.nav>
 
-      {/* Mobile/Tablet fullscreen overlay menu */}
+{/* Mobile/Tablet fullscreen overlay menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -100,9 +100,9 @@ export const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-100%" }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-background/95 backdrop-blur-sm lg:hidden"
+            className="fixed inset-0 z-40 flex flex-col items-center justify-center overflow-y-auto py-20 bg-background/95 backdrop-blur-sm lg:hidden"
           >
-            <ul className="flex flex-col items-center gap-8 relative z-10">
+            <ul className="flex flex-col items-center gap-6 relative z-10 w-full">
               {navItems.map((item, i) => (
                 <motion.li
                   key={item}
@@ -118,21 +118,21 @@ export const Navbar = () => {
                   </button>
                 </motion.li>
               ))}
-            </ul>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              className="absolute bottom-12 w-full text-center"
-            >
-              <button
-                onClick={() => scrollTo("contact")}
-                className="rounded-full bg-primary px-10 py-4 font-body text-fluid-button font-bold uppercase tracking-widest text-primary-foreground active:scale-95 transition-transform duration-100 motion-gpu"
+              <motion.li
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+                className="pt-4"
               >
-                Let's Talk
-              </button>
-            </motion.div>
+                <button
+                  onClick={() => scrollTo("contact")}
+                  className="rounded-full bg-primary px-10 py-4 font-body text-fluid-button font-bold uppercase tracking-widest text-primary-foreground active:scale-95 transition-transform duration-100 motion-gpu"
+                >
+                  Let's Talk
+                </button>
+              </motion.li>
+            </ul>
           </motion.div>
         )}
       </AnimatePresence>
