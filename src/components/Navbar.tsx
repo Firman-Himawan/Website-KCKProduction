@@ -50,9 +50,10 @@ export const Navbar = () => {
       >
         <div className="container flex items-center justify-between">
           <button 
-            onClick={() => scrollTo("home")} 
-            className="group font-display font-black tracking-tighter flex items-center gap-1 motion-gpu ml-[-2px]"
-style={{ fontSize: "clamp(0.85rem, 2vw, 1.4rem)" }}
+  onClick={() => scrollTo("home")} 
+  className="group font-display font-black tracking-tighter flex items-center gap-1 motion-gpu ml-[-2px] mr-8"
+  style={{ fontSize: "clamp(0.85rem, 2vw, 1.4rem)" }}
+>
           >
             <span className="text-gradient-gold group-hover:brightness-125 transition-all">KCK</span>
             <span className="text-white whitespace-nowrap"> PRODUCTION</span>
