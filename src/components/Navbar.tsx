@@ -96,7 +96,15 @@ export const Navbar = () => {
             exit={{ opacity: 0, y: "-100%" }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="fixed inset-0 z-[60] bg-background backdrop-blur-sm lg:hidden overflow-y-auto"
-          >
+>
+  {/* Tombol close di dalam overlay */}
+  <button
+    onClick={() => setIsOpen(false)}
+    className="absolute top-4 right-4 text-white p-2 z-[70]"
+  >
+    <X size={24} />
+  </button>
+            
             <ul className="flex flex-col items-center justify-center gap-6 min-h-full pt-16 pb-10 w-full">
               {navItems.map((item, i) => (
                 <motion.li
