@@ -44,15 +44,15 @@ export const Navbar = () => {
         }}
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.2, ease: "easeInOut" }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 overflow-hidden transition-all duration-300 ${
           scrolled ? "bg-background/80 md:bg-background/70 md:backdrop-blur-xl border-b border-white/5 py-3 md:py-4 shadow-2xl" : "bg-transparent py-4 md:py-6"
         }`}
       >
-        <div className="container flex items-center justify-between">
+        <div className="container flex items-center justify-between min-w-0 overflow-hidden">
           <button 
   onClick={() => scrollTo("home")} 
-  className="group font-display font-black tracking-tighter flex items-center gap-1 motion-gpu ml-[-2px] mr-8"
-  style={{ fontSize: "clamp(0.85rem, 2vw, 1.4rem)" }}
+  className="group font-display font-black tracking-tighter flex items-center gap-1 motion-gpu ml-[-2px] shrink-0"
+  style={{ fontSize: "clamp(0.75rem, 1.8vw, 1.4rem)" }}
 >
           >
             <span className="text-gradient-gold group-hover:brightness-125 transition-all">KCK</span>
