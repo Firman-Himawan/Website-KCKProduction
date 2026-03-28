@@ -51,7 +51,7 @@ export const Navbar = () => {
         <div className="container flex items-center justify-between">
           <button 
             onClick={() => scrollTo("home")} 
-            className="group font-display text-fluid-h3 font-black tracking-tighter flex items-center gap-1 motion-gpu"
+            className="group font-display text-fluid-body font-black tracking-tighter flex items-center gap-1 motion-gpu"
           >
             <span className="text-gradient-gold group-hover:brightness-125 transition-all">KCK</span>
             <span className="text-white whitespace-nowrap"> PRODUCTION</span>
