@@ -79,10 +79,10 @@ export const Navbar = () => {
             </button>
           </div>
 
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-white lg:hidden relative z-50 p-2 shrink-0"
-          >
+         <button
+  onClick={() => setIsOpen(!isOpen)}
+  className="text-white lg:hidden relative z-[70] p-2 shrink-0"
+>
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
