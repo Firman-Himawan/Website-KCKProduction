@@ -47,7 +47,6 @@ export const Navbar = () => {
         }`}
       >
         <div className="container flex items-center justify-between gap-4">
-          {/* Logo */}
           <button
             onClick={() => scrollTo("home")}
             className="group font-display font-black tracking-tighter flex items-center gap-1 motion-gpu shrink-0"
@@ -57,7 +56,6 @@ export const Navbar = () => {
             <span className="text-white whitespace-nowrap"> PRODUCTION</span>
           </button>
 
-          {/* Desktop menu — tampil di layar >= 1024px */}
           <ul className="hidden lg:flex items-center gap-6 xl:gap-10">
             {navItems.map((item) => (
               <li key={item}>
@@ -72,7 +70,6 @@ export const Navbar = () => {
             ))}
           </ul>
 
-          {/* Tombol Start Project — tampil di layar >= 1024px */}
           <div className="hidden lg:block shrink-0">
             <button
               onClick={() => scrollTo("contact")}
@@ -82,7 +79,6 @@ export const Navbar = () => {
             </button>
           </div>
 
-          {/* Hamburger — tampil di layar < 1024px (mobile + tablet) */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-white lg:hidden relative z-50 p-2 shrink-0"
@@ -92,7 +88,6 @@ export const Navbar = () => {
         </div>
       </motion.nav>
 
-{/* Mobile/Tablet fullscreen overlay menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -100,9 +95,9 @@ export const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-100%" }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center overflow-y-auto py-20 bg-background/95 backdrop-blur-sm lg:hidden"
+            className="fixed inset-0 z-40 bg-background/95 backdrop-blur-sm lg:hidden overflow-y-auto"
           >
-            <ul className="flex flex-col items-center gap-6 relative z-10 w-full">
+            <ul className="flex flex-col items-center justify-center gap-6 min-h-full py-24 w-full">
               {navItems.map((item, i) => (
                 <motion.li
                   key={item}
