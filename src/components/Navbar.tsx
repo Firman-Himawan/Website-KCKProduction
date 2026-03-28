@@ -97,7 +97,7 @@ export const Navbar = () => {
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="fixed inset-0 z-[60] bg-background backdrop-blur-sm lg:hidden overflow-y-auto"
           >
-            <ul className="flex flex-col items-center justify-center gap-6 min-h-full pt-28 pb-16 w-full">
+            <ul className="flex flex-col items-center justify-center gap-6 min-h-full pt-16 pb-16 w-full">
               {navItems.map((item, i) => (
                 <motion.li
                   key={item}
