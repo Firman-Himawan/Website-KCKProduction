@@ -60,7 +60,7 @@ export const Navbar = () => {
           </button>
 
           {/* Desktop */}
-          <ul className="hidden gap-10 md:flex">
+          <ul className="hidden gap-10 lg:flex">
             {navItems.map((item) => (
               <li key={item}>
                 <button
@@ -74,7 +74,7 @@ export const Navbar = () => {
             ))}
           </ul>
 
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <button 
               onClick={() => scrollTo("contact")}
               className="rounded-full border border-primary/50 text-primary px-6 py-2.5 font-body text-fluid-button font-bold uppercase tracking-widest transition-all hover:bg-primary hover:text-primary-foreground hover:shadow-[0_0_20px_0_hsl(38_80%_55%/_0.4)] motion-gpu"
@@ -85,8 +85,9 @@ export const Navbar = () => {
 
           {/* Mobile toggle */}
           <button 
-            onClick={() => setIsOpen(!isOpen)} 
-            className="text-white md:hidden relative z-50 p-2"
+  onClick={() => setIsOpen(!isOpen)} 
+  className="text-white lg:hidden relative z-50 p-2"
+>
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -101,8 +102,7 @@ export const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-100%" }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-background/95 backdrop-blur-sm md:hidden"
-          >
+            className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-background/95 backdrop-blur-sm lg:hidden"
             <ul className="flex flex-col items-center gap-8 relative z-10">
               {navItems.map((item, i) => (
                 <motion.li
