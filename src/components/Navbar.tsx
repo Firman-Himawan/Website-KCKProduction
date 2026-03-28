@@ -48,10 +48,10 @@ export const Navbar = () => {
       >
         <div className="container flex items-center justify-between gap-4">
           <button
-            onClick={() => scrollTo("home")}
-            className="group font-display font-black tracking-tighter flex items-center gap-1 motion-gpu shrink-0"
-            style={{ fontSize: "clamp(0.9rem, 2vw, 1.4rem)" }}
-          >
+  onClick={() => scrollTo("home")}
+  className={`group font-display font-black tracking-tighter flex items-center gap-1 motion-gpu shrink-0 transition-opacity duration-200 ${isOpen ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+  style={{ fontSize: "clamp(0.9rem, 2vw, 1.4rem)" }}
+>
             <span className="text-gradient-gold group-hover:brightness-125 transition-all">KCK</span>
             <span className="text-white whitespace-nowrap"> PRODUCTION</span>
           </button>
